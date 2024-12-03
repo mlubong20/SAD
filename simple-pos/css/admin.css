@@ -1,0 +1,160 @@
+:root {
+    /* Color Palette */
+    --coffee-brown: #6f4f37; /* Rich coffee brown */
+    --coffee-cream: #d4b49b; /* Creamy coffee beige */
+    --coffee-dark: #3e2723; /* Dark coffee */
+    --coffee-milk: #a1887f; /* Milk coffee */
+    --coffee-hover: #8d6e63; /* Lighter coffee for hover */
+    --gray-100: #f0f0f0; /* Light gray background */
+    --gray-300: #d3d3d3; /* Soft gray for borders */
+    --primary: #6b7280; /* Coffee gray for general accents */
+    --primary-lighter: #bfa8a0; /* Soft coffee beige for hover states */
+    --cream-background: #F1E1C6; /* Soft cream background for containers */
+}
+
+/* Header Styling */
+header {
+    background-color: var(--coffee-dark); /* Dark coffee for header background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: #fff; /* White text for header */
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 1.75em;
+    font-weight: 700;
+    color: var(--coffee-cream); /* Creamy coffee beige for title */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--coffee-milk); /* Milk coffee for subtitle */
+}
+
+/* Horizontal Rule */
+hr {
+    color: var(--gray-300); /* Light gray for horizontal rule */
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Sidebar Styling */
+aside {
+    height: calc(100vh - 64px); /* Full height minus header */
+    min-width: 100px;
+    max-width: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: var(--gray-100); /* Soft light gray for sidebar */
+    padding-top: 16px;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    height: calc(100vh - 64px); /* Full height minus header */
+    overflow-y: auto;
+    background-color: var(--gray-100); /* Soft light gray for main content */
+    padding: 16px;
+}
+
+/* Wrapper for general padding */
+.wrapper {
+    padding: 16px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links-item {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--coffee-dark); /* Dark coffee for nav items */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links-item:hover {
+    background-color: var(--primary-lighter); /* Lighter coffee beige on hover */
+    color: #fff; /* White text on hover */
+    cursor: pointer;
+}
+
+.nav-links-item .icon {
+    width: 48px;
+}
+
+/* Category Form Styling */
+.category-form {
+    padding: 16px;
+    width: 30%;
+    background-color: var(--gray-50); /* Soft gray for form background */
+    border: 1px solid var(--gray-300); /* Light gray border */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Category Table Styling */
+.category-table {
+    padding: 16px;
+    width: 50%;
+    background-color: var(--cream-background); /* Soft cream for table container */
+    border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--gray-300); /* Light gray border */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--primary-lighter); /* Light coffee beige */
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    font-size: 1.1em;
+    color: var(--coffee-dark); /* Dark coffee for header text */
+}
+
+td {
+    background-color: var(--gray-50); /* Light gray for table data */
+    border: 1px solid var(--gray-300); /* Light gray border */
+    padding: 12px;
+    color: var(--coffee-dark); /* Dark coffee for text */
+}
+
+tr:hover td {
+    background-color: var(--gray-100); /* Light gray for hovered rows */
+}
+
+tr:nth-child(even) {
+    background-color: var(--coffee-milk); /* Milk coffee for even rows */
+}
+
+/* Hover effects for the entire table */
+table tbody tr:hover {
+    background-color: var(--coffee-hover); /* Slightly lighter brown on row hover */
+    cursor: pointer;
+}

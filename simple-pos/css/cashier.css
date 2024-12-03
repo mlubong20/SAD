@@ -1,0 +1,289 @@
+:root {
+    /* Color Palette */
+    --coffee-brown: #6f4f37; /* Rich coffee brown */
+    --light-beige: #f5f5dc; /* Light beige */
+    --coffee-cream: #d4b49b; /* Creamy coffee beige */
+    --coffee-dark: #3e2723; /* Dark coffee */
+    --coffee-milk: #a1887f; /* Milk coffee */
+    --coffee-hover: #8d6e63; /* Lighter coffee for hover */
+    --cream-background: #F1E1C6; /* Soft cream for backgrounds */
+    --gray-light: #D1D5DB; /* Soft gray for subtle borders */
+    --high-contrast-text: #2c1b1b; /* Dark brown for better contrast */
+}
+
+/* Container for Product and Form Sections */
+.products, .forms {
+    margin: 16px;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid var(--coffee-brown);
+    display: flex;
+    flex-direction: column;
+}
+
+.products {
+    flex: 3;
+    background-color: var(--light-beige); /* Light beige background */
+    overflow-y: auto;
+}
+
+.forms {
+    flex: 2;
+    background-color: var(--coffee-cream); /* Creamy beige background */
+}
+
+/* Cart Item Layout */
+.cart-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--coffee-brown); /* Soft brown border for separation */
+    background-color: var(--light-beige); /* Light beige background */
+}
+
+.cart-item .left, .cart-item .middle, .cart-item .right {
+    display: flex;
+    align-items: center;
+}
+
+/* Cart item left section */
+.cart-item .left {
+    flex: 2;
+    padding-left: 16px;
+}
+
+/* Cart item middle section */
+.cart-item .middle {
+    flex: 1;
+}
+
+/* Cart item right section */
+.cart-item .right {
+    flex: 1;
+    text-align: right;
+    color: var(--coffee-dark); /* Dark coffee color for right section */
+}
+
+/* Cart buttons (Add/Remove) */
+.cart-item-buttons {
+    border: 1px solid var(--coffee-brown);
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--coffee-milk); /* Light milk coffee background */
+    border-radius: 4px;
+}
+
+.cart-item-buttons button {
+    background-color: var(--light-beige); /* Light beige background */
+    border: none;
+    cursor: pointer;
+    color: var(--coffee-dark); /* Dark coffee text */
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cart-item-buttons button:hover {
+    background-color: var(--coffee-hover); /* Lighter coffee for hover */
+    color: white; /* White text on hover */
+}
+
+.cart-item-buttons > * {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Card Design */
+.card {
+    background-color: var(--light-beige);
+    border: 1px solid var(--coffee-brown);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.card-header {
+    font-size: 1.25em;
+    color: var(--coffee-dark); /* Dark brown for headers */
+    margin-bottom: 8px;
+}
+
+.card-footer {
+    text-align: right;
+    color: var(--coffee-dark);
+}
+
+.card-content {
+    color: var(--coffee-dark);
+    padding: 8px 0;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    background-color: var(--coffee-cream); /* Soft cream background on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Controls (Inputs & Selects) */
+.form-control input,
+.form-control select {
+    background-color: var(--cream-background); /* Soft cream background */
+    margin-top: 4px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--coffee-brown); /* Coffee brown border */
+    width: 100%;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+    outline: none;
+    border-color: var(--coffee-hover); /* Focus border color */
+}
+
+/* Responsiveness - Make products and forms flexible on smaller screens */
+@media (max-width: 768px) {
+    .products, .forms {
+        flex: 1; /* Stack the products and forms sections */
+        margin: 8px 0; /* Reduce margin for better spacing on small screens */
+    }
+
+    .cart-item {
+        flex-direction: column; /* Stack cart item components vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .cart-item .left,
+    .cart-item .middle,
+    .cart-item .right {
+        width: 100%;
+        text-align: left; /* Align cart items' text to the left */
+    }
+
+    .cart-item-buttons {
+        width: 100%;
+        justify-content: space-between; /* Ensure buttons are spaced out */
+    }
+
+    .card {
+        margin-bottom: 16px;
+    }
+}
+
+/* Additional Improvements for General Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px; /* Add gap between items */
+}
+
+.container > * {
+    flex: 1;
+    min-width: 300px; /* Ensure content doesn't get too small */
+    margin: 16px;
+}
+
+/* To ensure smooth transitions and hover effects */
+button, .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .card:hover {
+    transform: scale(1.05); /* Slightly scale the element on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Accessibility - Focus states for better navigation */
+button:focus, .form-control input:focus, .form-control select:focus {
+    outline: 2px solid var(--coffee-dark); /* Strong focus outline */
+    outline-offset: 2px;
+}
+
+button:hover, .card:hover, .cart-item-buttons button:hover {
+    background-color: var(--coffee-hover); /* Lighter coffee for hover */
+    color: white; /* White text on hover */
+    outline: 2px solid var(--coffee-dark); /* Focus state on hover */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+button.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #45a049;
+}
+.receipt {
+    border: 1px solid #000;
+    padding: 15px;
+    margin-top: 15px;
+    width: 300px;
+  }
+  
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal[style*="display: block"] {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt-details {
+    margin-bottom: 10px;
+}
+

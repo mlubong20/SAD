@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700;800&display=swap');
+
+body {
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    --starbucks-green: #00704A; /* Iconic Starbucks Green */
+    --cream: #F8F5F1; /* Softer cream for better readability */
+    --dark-brown: #3B2C28; /* Rich dark brown for text contrast */
+    
+    --red-100: #FEE8E8; /* Slightly muted light red */
+    --red-500: #B71C1C; /* Deeper red for critical accents */
+    
+    --green-100: #E6F4E6; /* Softer green for calming accents */
+    --green-500: #356E35; /* Rich forest green for earthy undertones */
+
+    --primary: #3E5321; /* Dark olive green for primary elements */
+    --primary-lighter: #A7C48C; /* Lighter green for accents */
+    --primary-darker: #2C3E16; /* Darker green for depth and contrast */
+
+    --gray-50: #F9F6F4; /* Slightly brighter cream for background */
+    --gray-100: #F2E9E2; /* Soft beige for subtle backgrounds */
+    --gray-300: #D7B9A9; /* Latte beige for borders or dividers */
+    --gray-500: #66554A; /* Darker coffee gray for text */
+    --gray-700: #3C2F2F; /* Dark espresso gray for emphasis */
+
+    background: var(--gray-50);
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px; /* Increased font size for better readability */
+    color: var(--dark-brown);
+    line-height: 1.6; /* Improved line spacing */
+}
+
+.card {
+    background-color: var(--cream); 
+    box-shadow: var(--shadow);
+    margin: auto;
+    width: 90%; 
+    max-width: 500px; /* Reduced width for a more focused design */
+    border-radius: 15px; /* More rounded corners for a softer look */
+    overflow: hidden; /* Ensures content doesn't overflow */
+    border: 2px solid var(--gray-300); /* Soft border for depth */
+}
+
+.card-header {
+    padding: 25px;
+    border-bottom: 1px solid var(--gray-300);
+    background-color: var(--gray-100); /* Subtle header background */
+    color: var(--primary-darker); /* Deep olive for a cozy feel */
+    font-weight: 700; /* Bold for emphasis */
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.6em; /* Slightly larger for visual hierarchy */
+    color: var(--dark-brown);
+}
+
+.card-content {
+    padding: 25px; /* More padding for a spacious feel */
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased space between input and labels for better separation */
+}
+
+.form-control input, 
+.form-control select {
+    background-color: #FFFFFF; 
+    padding: 12px;
+    border-radius: 8px; /* Slightly rounder for a softer look */
+    border: 1px solid var(--gray-300); /* Subtle border for focus */
+    font-size: 14px; 
+    color: var(--dark-brown); /* Darker text color for better readability */
+}
+
+.form-control input:focus,
+.form-control select:focus { 
+    outline: none;
+    border-color: var(--starbucks-green); 
+    box-shadow: 0 0 5px var(--starbucks-green); /* Soft focus glow */
+}
+
+.btn {
+    font-weight: 600;
+    padding: 14px 22px; /* Larger buttons for better clickability */
+    background-color: var(--starbucks-green); /* Starbucks Green button */
+    border: none;
+    border-radius: 8px; /* Rounded corners for modern feel */
+    cursor: pointer;
+    color: #F1E1C6; /* Creamy text for contrast */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--primary-darker); /* Darker green on hover */
+    transform: translateY(-3px); /* Button lift effect */
+}
+
+.btn-outlined {
+    background-color: transparent; 
+    border: 2px solid var(--starbucks-green); /* Bold green border */
+    color: var(--starbucks-green); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outlined:hover {
+    background-color: var(--starbucks-green);
+    color: #FFFFFF; /* Switch to white on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.btn-primary {
+    background-color: var(--primary); 
+    color: #FFFFFF; 
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-darker); 
+}
+
+.alert {
+    border: 1px solid var(--gray-300);
+    color: var(--dark-brown);
+    background-color: var(--gray-100); /* Neutral alert background */
+    padding: 12px;
+    border-radius: 8px; /* Rounded corners for alerts */
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.alert-error {
+    background-color: var(--red-100); 
+    border-color: var(--red-500); 
+    color: var(--red-500);
+}
+
+.alert-success {
+    background-color: var(--green-100); 
+    border-color: var(--green-500); 
+    color: var(--green-500); 
+}
+
+/* Added subtle animations for hover effects */
+.btn, .btn-outlined, .form-control input, .form-control select {
+    transition: all 0.3s ease-in-out;
+}
